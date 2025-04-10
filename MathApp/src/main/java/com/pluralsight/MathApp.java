@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.sql.SQLOutput;
+
 public class MathApp {
     public static void main(String[] args) {
         // Question 1:
@@ -25,15 +27,25 @@ you want. Print the answer (i.e "The highest salary is ...")*/
         System.out.println("The lowest price is " + lowestPrice);
         //3. Find and display the area of a circle whose radius is 7.25
         float radius = 7.25f;
-        float pi = 3.14159f;
-        float Area = (pi * (radius * radius));
-        System.out.println(Area);
+        float Area = (float)(Math.PI * Math.pow(radius, 2));
+        System.out.println("The radius of the circle is " + Area);
 //      4. Find and display the square root a variable after it is set to 5.0
         short variable = 5;
         double squareRoot = Math.sqrt(variable);
-        System.out.println(squareRoot);
+        System.out.println("The square root of 5 is " + squareRoot);
+//5. Find and display the distance between the points (5, 10) and (85, 50)
+        short x1 = 5;
+        short y1 = 10;
+        short x2 = 85;
+        short y2 = 50;
 
+        double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2-y1, 2));
+        System.out.println("The distance between the points is " + distance);
 
+//6. Find and display the absolute (positive) value of a variable after it is set to -3.8
+
+//7. Find and display a random number between 0 and 1
+        System.out.println(Math.random());
 
     }
 }
